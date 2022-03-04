@@ -10,9 +10,9 @@ class BirthdayList
 
   def add_birthday(name, dob)
     @birthday = Birthday.new
-    @birthday[:name] = name
-    @birthday[:dob] = dob
-    @birthday >> @birthdays
+    @birthday.name = name
+    @birthday.dob = dob
+    @birthdays << @birthday
   end
 
   def print_birthday_list
