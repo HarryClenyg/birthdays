@@ -1,14 +1,20 @@
+require_relative 'birthday'
+
 class BirthdayList
 
-  attr_reader :birthdays
-  
+  attr_accessor :birthdays
+
   def initialize
     @birthdays = []
   end
 
-  def add_birthday
+  def add_birthday(name, dob)
+    @birthday = Birthday.new
+    @birthday[:name] = name
+    @birthday[:dob] = dob
+    @birthday >> @birthdays
   end
-  
+
   def print_birthday_list
   end
 
